@@ -1,112 +1,50 @@
-import Image from "next/image";
-
+import React from "react";
+import { HeartIcon, UserIcon } from '@heroicons/react/20/solid';
 export default function Home() {
+
+  const items = [
+    'https://s3-alpha.figma.com/hub/file/450093333/1c8da3c8-f9e3-49da-a5a1-23744ac8c736-cover.png',
+    'https://s3-alpha.figma.com/hub/file/5526330848/14a6765e-153e-4a77-b281-3b76faf90eec-cover.png',
+    'https://s3-alpha.figma.com/hub/file/4155729969/90f6bad4-4513-4272-8705-2b33b73ff4f1-cover.png',
+    'https://s3-alpha.figma.com/hub/file/1163776049/2e50785f-62f9-41df-ab36-53b28b9facc7-cover.png',
+    'https://s3-alpha.figma.com/hub/file/5456494083/d3a6b485-470e-471d-a932-67be73107678-cover.png',
+    'https://s3-alpha.figma.com/hub/file/6089240884/f296bf94-aa1d-414d-b376-b0d16b1463c6-cover.png',
+    'https://s3-alpha.figma.com/hub/file/4771634816/17d688df-dadd-4c4f-aa75-4b5bc5c5c795-cover.png',
+    'https://s3-alpha.figma.com/hub/file/722509618/692d65bb-0f20-4ba9-b4d0-0837fe70f0f7-cover.png',
+    'https://s3-alpha.figma.com/hub/file/1752518746/a39cb1b6-ce01-4e91-848e-4b0a31ad5f9f-cover.png',
+    'https://s3-alpha.figma.com/hub/file/626214190/6e220bcf-c8cd-4dae-934c-e4f271d6f331-cover.png'
+  ]
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <main className="container mx-auto p-4">
+      <h1 className="font-bold text-3xl">Icon Packs</h1>
+      <p className="text-sm text-gray-500 my-3">Elevate your interfaces with iconic icons! Explore thousands of icons.</p>
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {items.map((_, index) => (
+          <div key={index} className="p-4 border rounded-lg shadow-lg">
+            <img
+              src={_}
+              alt="Cover"
+              className="w-full h-auto rounded-md"
             />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <div className="mt-4 flex items-center justify-between">
+              <div>
+                <span className="block text-sm font-semibold">Iconify</span>
+                <span className="block text-xs text-gray-500">by Vjacheslav Trushkin</span>
+              </div>
+              <div className="flex">
+                <div className="flex ">
+                  <HeartIcon className="w-4 h-4" />
+                  <span className="text-xs text-gray-500">14.7k</span>
+                </div>
+                <div className="flex  ml-2">
+                  <UserIcon className="w-4 h-4" />
+                  <span className="text-xs text-gray-500">14.7k</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </main>
   );
